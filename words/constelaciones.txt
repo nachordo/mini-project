@@ -1,0 +1,59 @@
+Andromeda
+Ave del Paraiso
+Acuario
+Aguila
+Altar
+Aries
+Boyero
+Cancer
+Lebreles
+Can Mayor
+Can Menor
+Capricornio
+Casiopea
+Centauro
+Cefeo
+Camaleon
+Compas
+Paloma
+Cabellera de Berenice
+Corona Austral
+Corona Boreal
+Cuervo
+Copa
+Cruz del Sur
+Cisne
+Delfin
+Dragon
+Eridano
+Horno
+Geminis
+Grulla
+Hercules
+Reloj
+Lagarto
+Leo
+Liebre
+Libra
+Lobo
+Lira
+Unicornio
+Ofiuco
+Orion
+Pegaso
+Perseo
+Fenix
+Piscis
+Pez austral
+Brujula
+Sagitario
+Escorpio
+Escultor
+Escudo
+Serpiente
+Tauro
+Triangulo
+Triangulo austral
+Osa Mayor
+Osa Menor
+Virgo
