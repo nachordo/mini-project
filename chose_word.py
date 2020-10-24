@@ -48,4 +48,4 @@ def choosing_word(election):
     
     #The function returns a random word from the chosen category
     word_to_guess = random.sample(words, 1)[0]
-    return word_to_guess
+    return word_to_guess.upper()

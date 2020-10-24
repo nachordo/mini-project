@@ -8,35 +8,53 @@ Created on Sat Oct 24 12:11:08 2020
 import os
 import numpy as np
 import random
+from hangman_ascii import *
+from chose_word import *
 
-word = "CACAHUE"
-word_splitted = [letter for letter in word]
-letters_in_word = set(word_splitted) - set(" ")
+hangman = get_ascii_hangman()
 
-letters_chosen = []
-letters_guessed = []
-win_trigger = False
 
-letter = ""
+def core_hangman_game():
+    word = "CACAHUE"
+    word_splitted = [letter for letter in word]
+    letters_in_word = set(word_splitted) - set(" ")
+    alphabet = [i for i in "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"]
+    
+    letters_chosen = []
+    letters_guessed = []
+    win_trigger = False
+    game_on = True
 
-while (letter != '0' or win_trigger):
-    letter = input("Escoge una letra: ")
-    while letter in letters_chosen:
-        letter = input("Escoge una letra diferente: ")
-    
-    #os.system("clear")
-    letters_chosen += [letter]
-    if letter in word_splitted:
-        letters_guessed += [letter]
-    
-    print(letters_guessed)
-    
-    if set(letters_guessed) == letters_in_word:
-        win_trigger = True
-    
-    
-    print(letter != '0' , not(win_trigger),letter != '0' or not(win_trigger))
-    
+    letter = ""
+
+    while game_on:
+        letter = input("Escoge una letra: ")
+        letter = letter.upper()
+        while (letter in letters_chosen) or (len(letter) != 1):
+            if letter in letters_chosen:
+                print("Ya has elegido anteriormente esa letra...")
+                letter = input("Escoge una letra: ")
+            elif len(letter) != 1:
+                print("UNA letra...")
+                letter = input("Escoge una letra: ")
+            elif not(letter in alphabet):
+                print("Una LETRA...")
+                letter = input("Escoge una letra: ")
+                    
+        letters_chosen += [letter]
+        if letter in word_splitted:
+            letters_guessed += [letter]
+            
+        print("USADAS: ", letters_chosen)
+        print(letters_guessed)
+
+        print(letters_in_word)
+        
+        if set(letters_guessed) == letters_in_word:
+            win_trigger = True
+        
+        print(letter != '0' , not(win_trigger),letter != '0' or not(win_trigger))
+        #os.system("clear")
         
     
-
+core_hangman_game()
