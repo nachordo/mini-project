@@ -34,7 +34,8 @@ def core_hangman_game():
     victory_screen = hangman_ascii_art[0]
     gameover_screen = hangman_ascii_art[-1]
     
-    
+    #Clears screen
+    os.system("clear")
     while game_on:
         #Begining the game, the hangman is printed
         #with its current progress, and the list og the used
@@ -53,7 +54,6 @@ def core_hangman_game():
         else:
             fail_count +=1
             
-        print(letters_in_word)
         
         #Checks if the player has won
         if set(letters_guessed) == letters_in_word:

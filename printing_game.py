@@ -8,10 +8,6 @@ Created on Sat Oct 24 12:55:30 2020
 from hangman_ascii import *
 
 
-wordd = "BABA YETU YETU"
-
-gss=set(["A","T"]) 
-ch=set(["A","T","X"])
 
 def print_word(word, guess):
     string_word = "   "
@@ -39,10 +35,6 @@ def print_guess(lst):
 
     return string_letters
 
-#wdd= print_word(word,)
-#print(wdd)
-hangman = get_ascii_hangman()[1:-1]
-
 def printing_progress(word,counter,used, guess,hangman):
     print(hangman[counter])
     print(print_chosen(used))
@@ -52,8 +44,6 @@ def printing_progress(word,counter,used, guess,hangman):
     print("\n\n")
 
 
-printing_progress(wordd, 5, ch, gss, hangman)
-    
     
     
 
