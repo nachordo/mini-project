@@ -1,5 +1,5 @@
 # Hangman  
-## An Ironhack mini-game-project by Ignacio Ordovás Pascual
+## A mini-game-project for the Ironhack data analysis bootcamp
  
 Welcome to my version of the Hangman game! Sit and enjoy :) 
  
@@ -15,6 +15,7 @@ When the game is finished, you can choose to play another round or close the gam
  
  
  
+ 
 ### Modding the game
  
 You can easily mod this game adding additional categories to use your favourite themes or removing ones that you may find silly. The procedure is the following:
@@ -26,6 +27,7 @@ You can easily mod this game adding additional categories to use your favourite 
 - Don’t leave empty lines!
  
 - Place this file in the “words” folder, and that’s it!
+ 
  
  
  
