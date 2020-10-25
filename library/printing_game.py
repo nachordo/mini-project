@@ -5,7 +5,7 @@ Created on Sat Oct 24 12:55:30 2020
 
 @author: ordovas
 """
-from hangman_ascii import *
+from library.hangman_ascii import *
 
 
 

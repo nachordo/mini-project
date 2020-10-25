@@ -7,10 +7,10 @@ Created on Sat Oct 24 12:11:08 2020
 """
 import os
 import random
-from hangman_ascii import *
-from chose_word import *
-from printing_game import *
-from core_game import *
+from library.hangman_ascii import *
+from library.chose_word import *
+from library.printing_game import *
+from library.core_game import *
 
 
 game_playing = True
