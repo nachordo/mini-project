@@ -35,8 +35,9 @@ def print_guess(lst):
 
     return string_letters
 
-def printing_progress(word,counter,used, guess,hangman):
+def printing_progress(word,category,counter,used, guess,hangman):
     print(hangman[counter])
+    print("\nCategoría: ",category,"\n")
     print(print_chosen(used))
     print(print_guess(guess))
     print("\n")

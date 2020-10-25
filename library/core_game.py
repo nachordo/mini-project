@@ -17,7 +17,7 @@ def core_hangman_game():
     os.system("clear")
     
     #The player is asked for a category and the program chooses a random word among it
-    word = guess_word_workflow()
+    word, category = guess_word_workflow()
     #The program obtains the different letters of the 
     word_splitted = [letter for letter in word]
     letters_in_word = set(word_splitted) - set(" ")
@@ -40,7 +40,7 @@ def core_hangman_game():
         #Begining the game, the hangman is printed
         #with its current progress, and the list og the used
         #and guessed letters
-        printing_progress(word,fail_count,letters_chosen, letters_guessed,hangman_screen)
+        printing_progress(word,category,fail_count,letters_chosen, letters_guessed,hangman_screen)
         
         #The program asks for a letter 
         letter = input_letter(letters_chosen)

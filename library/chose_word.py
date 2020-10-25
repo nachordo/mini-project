@@ -43,12 +43,20 @@ def input_word_modules(word_modules):
     print_word_modules(word_modules)
     
     #Choosing a category
-    print("\n")
-    election = input("Escoge una categoría: ")
+    print("\n\n")
+    election = input("Escoge una categoría (o 'Sorpresa' para escoger una al azar): ")
     election = process_word(election)
+    
+    #Chooses a random category if the player wants
+    if election.lower() == ("sorpresa"):
+        election = random.sample(word_modules, 1)[0]
+    
+    #Continue asking for a valid option
     while not(election in word_modules):
         election = input("Escoge una categoría correcta: ")
         election = process_word(election)
+        if election.lower() == ("sorpresa"):
+            election = random.sample(word_modules, 1)[0]
     
     return election
         
@@ -72,7 +80,7 @@ def guess_word_workflow():
     #print_word_modules(word_modules)
     election = input_word_modules(word_modules)
     word_to_guess = choosing_word(election)
-    return word_to_guess
+    return word_to_guess,election.replace("_"," ").capitalize()
 
 
 def input_letter(letters_chosen):
