@@ -70,8 +70,10 @@ def core_hangman_game():
     #The game is finished, so it prints either the victory or game over screen
     if win_trigger:
         print(victory_screen)
+        print("\n\n Solución:  ",print_word(word, letters_in_word),"\n\n")
     else:
         print(gameover_screen)
+        print("\n\n Solución:  ",print_word(word, letters_in_word),"\n\n")
     
     return win_trigger
 
