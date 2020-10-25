@@ -15,17 +15,19 @@ from library.core_game import *
 
 game_playing = True
 
-while game_playing:
-    
+#Intro screen
 
-    core_hangman_game()
+
+while game_playing:
+    os.system("clear")
+    #Choose the difficulty
+    dificulty = choose_difficulty()
     
-    continua = input("\n¿Continuar jugando? (SI/NO): ")
-    continua = continua.upper()
+    #Begins the game
+    core_hangman_game(dificulty)
     
-    while not(continua[0]=="S" or continua[0]=="N"):
-        continua = input("\n¿Continuar jugando? (SI/NO): ")
-        continua = continua.upper()
+    #Asks if the player wants play again
+    continua = continue_playing()
     
     os.system("clear")
     if continua[0]=="N":

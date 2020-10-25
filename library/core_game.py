@@ -12,9 +12,35 @@ from library.chose_word import *
 from library.printing_game import *
 
 
+def choose_difficulty():
+    #Simple function to choose the dificulty level
+    difficulty = input("Escoge un nivel de dificultad (fácil, media o difícil): ")
+    difficulty = process_word(difficulty)
+    #Continue asking if it is not a valid input
+    while not(difficulty in ["facil","media","dificil"]):
+        difficulty = input("Escoge un nivel de dificultad (fácil, media o difícil):  ")
+        difficulty = process_word(difficulty)
+        
+    print("\n\n")
+    return difficulty
 
-def core_hangman_game():
-    os.system("clear")
+
+def continue_playing():
+    #Function to ask the player to continue playing
+    continua = input("\n¿Continuar jugando? (SI/NO): ")
+    continua = continua.upper()
+    
+    #Continue asking if it is not a valid input
+    while not(continua[0]=="S" or continua[0]=="N"):
+        continua = input("\n¿Continuar jugando? (SI/NO): ")
+        continua = continua.upper()
+    
+    return continua
+
+
+
+
+def core_hangman_game(difficulty):
     
     #The player is asked for a category and the program chooses a random word among it
     word, category = guess_word_workflow()
@@ -29,10 +55,9 @@ def core_hangman_game():
     game_on = True
     fail_count = 0
     letter = ""
-    hangman_ascii_art = get_ascii_hangman()
-    hangman_screen = hangman_ascii_art[1:-1]
-    victory_screen = hangman_ascii_art[0]
-    gameover_screen = hangman_ascii_art[-1]
+    hangman_screen = get_ascii_hangman(difficulty)
+    victory_screen = get_victory_screen()
+    gameover_screen = get_gameover_screen()
     
     #Clears screen
     os.system("clear")
