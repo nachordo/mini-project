@@ -4,6 +4,10 @@ Created on Sat Oct 24 16:14:26 2020
 
 @author: NACHO
 """
+
+
+#ascii art adapted from https://ascii.co.uk/art/hangman
+
 def get_victory_screen():
     hangman_draw ="""
           ,%%%%%%%%,%%%

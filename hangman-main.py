@@ -16,10 +16,28 @@ from library.core_game import *
 game_playing = True
 
 #Intro screen
+os.system("clear")
+print("""
+      
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/                       
+
+
+                             by Nacho Ordovás
+      
+        
+      
+      """)  #ascii art from https://ascii.co.uk/art/hangman
 
 
 while game_playing:
-    os.system("clear")
+    
     #Choose the difficulty
     dificulty = choose_difficulty()
     
